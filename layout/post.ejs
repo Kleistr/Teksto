@@ -37,14 +37,14 @@
 </div>
 <!-- addTocToggle-->
 <script>
-    $(".js-toggle-toc").text(" —");
+    $(".js-toggle-toc").text(" ▽");
     $(".js-toggle-toc").click(function(){
         var toc = $(".toc-content");
         toc.toggle();
         if (toc.is(":hidden")) {
-            $(this).text(" >>");
+            $(this).text(" ▶");
         } else {
-            $(this).text(" —");
+            $(this).text(" ▽");
         }
         return false;
     });
@@ -53,8 +53,6 @@
     }
     function downToBottom(){
         var docHeight = $('body').height();
-
         $('html, body').animate({ scrollTop: docHeight });
     }
-
 </script>
