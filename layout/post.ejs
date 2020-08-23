@@ -1,0 +1,60 @@
+<article class="post">
+    <div class="post-title">
+        <h1 class="title"><%= page.title %></h2>
+    </div>
+    <% if (page.title !== "About") { %>
+    <div class="post-meta">
+        <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+        <% if (page.author) { %>
+        <span class="post-author"><%= page.author %></span>
+        <% } else { %>
+        <span class="post-author"><%= config.author %></span>
+        <% } %>
+    </div>
+    <% }%>
+    <% if (page.image) { %>
+    <div class="post-image">
+        <img src="<%= page.image %>" alt="">
+    </div>
+    <% }%>
+    <div class="post-content">
+        <!-- addTocToArticle -->
+        <%- partial('_partial/toc') %>
+        <%- page.content %>
+    </div>
+
+</article>
+<div class="prev_next">
+    <%- partial('_partial/prev_next') %>
+</div>
+
+<div class="post-comment">
+    <%- partial('_partial/disqus') %>
+</div>
+<div id="top">
+    <a href="javascript:backToTop();">▲</a>
+    <a href="javascript:downToBottom();">▼</a>
+</div>
+<!-- addTocToggle-->
+<script>
+    $(".js-toggle-toc").text(" —");
+    $(".js-toggle-toc").click(function(){
+        var toc = $(".toc-content");
+        toc.toggle();
+        if (toc.is(":hidden")) {
+            $(this).text(" >>");
+        } else {
+            $(this).text(" —");
+        }
+        return false;
+    });
+    function  backToTop() {
+        $('html, body').animate({ scrollTop: 0 });
+    }
+    function downToBottom(){
+        var docHeight = $('body').height();
+
+        $('html, body').animate({ scrollTop: docHeight });
+    }
+
+</script>

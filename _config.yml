@@ -1,0 +1,17 @@
+menu:
+    Home: /
+    Archives: /archives
+    About: /About
+
+# fa is an widget to print how many days that fafa gone
+fa: false
+
+vertical: false
+excerpt: true
+toc: true
+darkmode: true
+always_darkmode: false
+podcast: false
+favicon: favicon.png
+avatar:  /imgs/avatar.png
+license: CC BY-NC-ND 4.0

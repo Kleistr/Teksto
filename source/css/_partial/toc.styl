@@ -1,0 +1,44 @@
+/*toc begin*/
+.toc-article {
+    // position: fixed;
+    right: 5%;
+    // transform: translateX(50%);
+     background: #efefef;
+    margin: 0 0 0 0.2em;
+    padding: 1em 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 1.5em;
+    font-size: calc(12px + 2 * ((100vw - 320px) / 960));
+    float: right;
+    max-width: 32%;
+    min-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index :99999;
+    box-shadow: 1px 1px 5px rgba(12,12,12,.2);
+    strong {
+        padding: 0.3em 0 0 2em;
+    }
+    a {
+        border-bottom:  none !important;
+    }
+    li {
+        margin: 0 0 0 0.2em;
+        list-style-type: none;
+    }
+    ol {
+        margin: 0 0 0 0.2em;
+        list-style-type: none;
+        padding-left: 10px;
+    }
+    ol li:before {
+        display: none;
+    }
+    /*下级目录的缩进量 */
+    .toc-child {
+        margin-left: 0.8em;
+    }
+}
+
+/* toc end*/

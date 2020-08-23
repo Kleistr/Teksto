@@ -1,0 +1,90 @@
+.header {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em 1em 1em 1em;
+    // padding-bottom: 0.5em;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .avatar {
+        margin-bottom: 24px;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        transition: 1s ease transform;
+        // &:hover {   
+        //     -webkit-transform: rotate(-360deg);      
+        //     -moz-transform: rotate(-360deg);      
+        //     -o-transform: rotate(-360deg); 
+        //     transition: 1s ease transform;
+        // }
+    }
+    .description {
+        color: #495057;
+        font-weight: light;
+    }
+    #jumao {
+        padding: .5em;
+        box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        position: fixed;
+        background: #fff;
+        top: 100%;
+        left: 0%;
+        -webkit-font-smoothing: antialiased;
+        transform: translate(10%, -120%);
+        color: var(--main-color);
+    }
+    .blog-title .logo {
+        font-family: var(--serif-font-family);
+        color: var(--main-color);
+        font-size: 1.7em;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+            color: var(--theme-color);
+            transition: .3s color;
+        }
+    }
+    .blog-title {
+        min-height: 2em !important;
+    }
+    .menu {
+        margin: 0 auto;
+        vertical-align: text-top;
+        padding-left: 0;
+        
+        .menu-item {
+            display: inline-block;
+            padding: 0.25em;
+        }
+
+        .menu-item-link {
+            color:  #818181;
+            text-decoration: none;
+            font-size: 1em;
+            &:hover {
+                color: var(--theme-color);
+                transition: .3s color;
+            }
+        }
+        .current-menu-item-link {
+            color: #111;
+            text-decoration: none;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .menu {
+            display: inline-flex;
+        }
+    }
+}
+
+.menu  >li:not(:first-child):before{
+    content: "/ ";
+    // font-size: 20px;
+    color: #818181;
+    margin: 0 4px;
+}
