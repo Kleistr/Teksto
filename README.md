@@ -2,7 +2,7 @@
 
 An almost pure text hexo theme.
 
-![shortcut](https://kleist-blog.oss-cn-beijing.aliyuncs.com/BlogPic/shortcut-2020-08-23.png)
+![shortcut](source/imgs/shortcut.png)
 
 目前支持跟随系统切换暗黑模式，但由于 Windows 系统无法像 macOS 一样自动切换，所以如果需要在 Windows 实现随日出日落进行模式切换需要稍微做点手脚：
 
