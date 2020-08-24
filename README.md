@@ -1,6 +1,6 @@
 # 清文 | Teksto
 
-An almost pure text hexo theme.
+这是一个几乎纯文本的 hexo 主题，从 2015 年搭建 typecho 后来换到 wordpress，最后停留在 hexo，期间换个不少主题，但每次都是自己修修改改用段时间就腻了。或许跟喝饮料喝白开水一个性质吧，尽管出门热得够呛的时候期望来一杯加冰快乐水，但长久陪伴的还是白开。所以最后就做了一个没有花里胡哨排版，尽量减少美化的主题，可能寡淡并不适合大众口味，不过无妨。
 
 ![shortcut](source/imgs/shortcut.png)
 
@@ -12,3 +12,37 @@ An almost pure text hexo theme.
 > 3. 触发器: 填上需要切换黑暗模式的时间,我填的是每天 18:00
 > 4. 操作: 程序或脚本一栏填上 `reg.exe`,在参数一栏填上 `add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 0 /f`, 即每天 18:00 自动将 win 主题切换为深色模式
 > 5. 同样的操作, 这次需要是在早上将 win 主题深色模式改回浅色模式, 只需要将触发器的时间改为早上任意时间(我填的 7:30)即可, 另外在操作中将参数改为 `add HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize /v AppsUseLightTheme /t REG_DWORD /d 1 /f`
+
+## 配置
+
+``` yml
+menu:
+    Home: /
+    Archives: /archives
+    About: /About
+
+fa: false
+# 页面左下角显示发发离开的天数挂件
+
+vertical: false
+# 竖排版模式（暂未实现）
+
+excerpt: true
+# 文章摘要
+
+toc: true
+# 全局目录，Markdown 里面将 toc 设为 true，但这里为 false 便不会显示。文章页面没有 toc 或 toc: false，即使这里开了也不会有目录。
+
+darkmode: true
+always_darkmode: false
+# 深色模式 / 深色模式常开
+
+favicon: favicon.png
+# 网站图标
+
+avatar:  /imgs/avatar.png
+# 主页头像
+
+license: CC BY-NC-ND 4.0
+# license
+```
