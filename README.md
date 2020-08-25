@@ -21,28 +21,45 @@ menu:
     Archives: /archives
     About: /About
 
-fa: false
 # 页面左下角显示发发离开的天数挂件
+fa: false
 
-vertical: false
 # 竖排版模式（暂未实现）
+vertical: false
 
-excerpt: true
 # 文章摘要
+excerpt: true
 
-toc: true
 # 全局目录，Markdown 里面将 toc 设为 true，但这里为 false 便不会显示。文章页面没有 toc 或 toc: false，即使这里开了也不会有目录。
+toc: true
 
+# 深色模式 / 深色模式常开
 darkmode: true
 always_darkmode: false
-# 深色模式 / 深色模式常开
 
-favicon: favicon.png
 # 网站图标
+favicon: favicon.png
 
-avatar:  /imgs/avatar.png
 # 主页头像
+avatar:  /imgs/avatar.png
 
-license: CC BY-NC-ND 4.0
 # license
+license: CC BY-NC-ND 4.0
 ```
+## 文件树
+
+```
+Teksto
+├─languages
+├─layout
+│  └─_partial
+├─scripts
+└─source
+    ├─css
+    │  └─_partial
+    ├─imgs
+    └─js
+```
+
+## 许可
+MIT License
