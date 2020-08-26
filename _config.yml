@@ -1,6 +1,7 @@
 menu:
     Home: /
     Archives: /archives
+    Excerpt: /Excerpt
     About: /About
 
 # fa is an widget to print how many days that fafa gone and print fafa's logo.
