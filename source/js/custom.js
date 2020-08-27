@@ -51,3 +51,31 @@ $(document).ready(function ShowTimeFamamaGone() {
     // console.log('橘猫不在的第' + length + '.' + dot + '天');
 });
 
+/*
+* 根据系统优化菜单栏的显示效果（字体原因）
+*/
+
+$(document).ready(function fixMenu() {
+    const ua = navigator.userAgent.toLowerCase();
+    const testUa = regexp => regexp.test(ua);
+    let system = "unknow";
+    if (testUa(/windows|win32|win64|wow32|wow64/g)) {
+        system = "windows";     // windows系统
+    } else if (testUa(/macintosh|macintel/g)) {
+        system = "macos";       // macos系统
+    } else if (testUa(/ios|iphone|ipad|ipod|iwatch/g)) {
+        system = "ios";         // ios系统
+    }
+    let platform = "unknow";
+    if (system === "ios" || system === "macos") {
+        platform = "apple";     // apple
+    } else {
+        platform = "else";      // other platform
+    }
+    if (platform == 'apple') {
+        $('.menu').css('font-family',"'ST Song','songti SC','SimSun',serif !important");
+        console.log('realTimePlatfrom: ' + platform);
+    } else {
+        console.log('realTimePlatfrom: ' + platform);
+    }
+});
