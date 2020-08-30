@@ -73,9 +73,10 @@ $(document).ready(function fixMenu() {
         platform = "else";      // other platform
     }
     if (platform == 'apple') {
-        $('.menu').css('font-family',"'ST Song','songti SC','SimSun',serif !important");
         console.log('realTimePlatfrom: ' + platform);
+        $('.menu').addClass('apple');
     } else {
+        // $('.description').css('color','red !important');
         console.log('realTimePlatfrom: ' + platform);
     }
 });
