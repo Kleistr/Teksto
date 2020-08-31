@@ -76,7 +76,6 @@ $(document).ready(function fixMenu() {
         console.log('realTimePlatfrom: ' + platform);
         $('.menu').addClass('apple');
     } else {
-        // $('.description').css('color','red !important');
         console.log('realTimePlatfrom: ' + platform);
     }
 });
