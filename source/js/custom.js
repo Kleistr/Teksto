@@ -1,15 +1,15 @@
 /**
- * PhotoFigcaption
+ * photoFigcaption
  */
 $(document).ready(function addPhotoFigcaption(){ 
     const images = $(".post-content img").not(".justified-gallery img");
     images.each(function (i, o) {
     const $this = $(o);
     if ($this.attr("alt")) {
-    const t = $(
-        '<div class="img-alt">' + $this.attr("alt") + "</div>"
-    );
-    $this.after(t);
+        const t = $(
+            '<div class="img-alt">' + $this.attr("alt") + "</div>"
+        );
+        $this.after(t);
     }
 });
 }) 
@@ -18,21 +18,18 @@ $(document).ready(function addPhotoFigcaption(){
  * addCopyrightWhenCopy
  */
 
- $(document).on('copy', function addCopyright(e)
-  {
+$(document).on('copy', function addCopyright(e) {
     var selected = window.getSelection();
     var selectedText = selected.toString().replace(/\n/g, '<br>');  // Solve the line breaks conversion issue
     var copyFooter = '<br><br>' + '商业转载请联系作者获得授权，非商业转载请注明出处。<br>'
-                          + 'Author：kleist<br> Link：' + document.location.href;
+                    + 'Author：kleist<br> Link：' + document.location.href;
     var copyHolder = $('<div>', {id: 'temp', html: selectedText + copyFooter, style: {position: 'absolute', left: '-99999px'}});
-      
     $('body').append(copyHolder);
     selected.selectAllChildren( copyHolder[0] );
     window.setTimeout(function() {
         copyHolder.remove();
     },0);
 });
-
 
 /*
  * showHowManyDaysFaFaGone
