@@ -4,7 +4,7 @@ body {
     line-height: 1.6em;
     padding: 0 1.2em;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 1000px;
     word-break: break-word;
 }
 ::selection {
@@ -27,9 +27,15 @@ body {
     background: rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 750px) and (max-width: 1000px)  {
     body {
+        max-width: 750px;
         margin-left: calc((100vw - 3em - 750px) / 2);
+    }
+}
+@media screen and (min-width: 1000px) {
+    body {
+        margin-left: calc((100vw - 3em - 1000px) / 2);
     }
 }
 
