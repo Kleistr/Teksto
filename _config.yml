@@ -5,7 +5,7 @@ menu:
     About: /About
 
 # fa is an widget to print how many days that fafa gone and print fafa's logo.
-fa: false
+fa: true
 
 vertical: false
 excerpt: true
