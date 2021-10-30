@@ -1,7 +1,8 @@
 :root {
-    --serif-font-family: 'Noto Serif SC', "Apple Color Emoji", "Segoe UI Emoji", serif;
+    --serif-font-family: 'Noto Serif SC',  "Segoe UI Emoji", serif;
     --main-color: rgba(0, 0, 0, 0.86);
-    --theme-color:#006CFF;
+    --theme-color:#3c8cf9;
+    --theme-opacity-color: #006cff26;
     // --theme-color: #1e88a8;
     // --theme-color: #1067de;       //apple deep blue
     // --theme-color: #2b9bff;       //apple light blue
@@ -22,7 +23,7 @@
     // border-style: solid none;
     h1.title {
         margin: 0;
-        // color: var(--main-color);
+        color: var(--main-color);
         display: flex;
         font-family: var(--serif-font-family);
         justify-content: center;
@@ -43,6 +44,18 @@
     }
     .post-image {
         margin: 1em 0;
+        img{
+            margin: 1em 0;
+            height: auto;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+            max-height: -webkit-fill-available;
+            box-sizing: content-box;
+            width: auto;
+            border-radius: 6px;
+        }
     }
 
     .post-content table {
@@ -85,7 +98,7 @@
         font-weight: bold;
         line-height: 1.2em;
         &:hover {
-            letter-spacing: .1em;
+            letter-spacing: .01em;
             transition:  .3s ease-in-out letter-spacing;
         }
     }
@@ -132,31 +145,36 @@
     mark {
         background-color: rgba(255,255,0,.5);
         color: #000;
+        // &:before {
+        //     content: ' »» ';
+        //     vertical-align: text-bottom;
+        // }
     }
     blockquote {
         // font-style: italic;
-        border-left: 3px solid #616161;
-        padding-left: 20px;
-        margin: 1rem 0 1rem .6rem;
+        border-left: 3px solid var(--theme-color);
+        background: var(--theme-opacity-color);
+        padding: 1px 1em;
+        margin: 1rem 0 1rem 0.6rem;
 
         p,a,li {
-            color: #9a9a9a;
+            color: #525252;
         }
         p {
             margin-top: 0.5em;
         }
     }
-    blockquote:before {
-        content: "";
-        width: 11.2px;
-        height: 7.4px;
-        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAMAAADwppwCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACuUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF7IU6UAAAA6dFJOU540l5WcKpIAlBFkcAyKBI1pnTVcSEA9IlKRKyYUfpg+gW0GiJmPZRdWXyEvmi5RgHRxYAN9UBI2KZaE9seNAAAApUlEQVQY062Q1w7CMAxF3QGmdFP2Knvvzf//GLGdSBUSb/glx/cosRXAHwVybObxbK2jvR26By2iKQDYAfNyp/ioha8YcrkwIt6KaBOPJa8Sr2RGl3jocd4gDics+jY1Tc5bhNCTrQbEGedBh7gu6/Kj4CeXK+KJeXG+k3BAl4VeavilRNk0NfRcw6WisP4nvme8TfPER1oUGTgVVRCrP0k03yL8AAp6C3N7Y7HDAAAAAElFTkSuQmCC") no-repeat;
-        display: block;
-        background-size: contain;
-        line-height: 1.6em;
-        margin-left: .5em;
-        margin-bottom: 0;
-    }
+    // blockquote:before {
+    //     content: "";
+    //     width: 11.2px;
+    //     height: 7.4px;
+    //     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAARCAMAAADwppwCAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACuUExURQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF7IU6UAAAA6dFJOU540l5WcKpIAlBFkcAyKBI1pnTVcSEA9IlKRKyYUfpg+gW0GiJmPZRdWXyEvmi5RgHRxYAN9UBI2KZaE9seNAAAApUlEQVQY062Q1w7CMAxF3QGmdFP2Knvvzf//GLGdSBUSb/glx/cosRXAHwVybObxbK2jvR26By2iKQDYAfNyp/ioha8YcrkwIt6KaBOPJa8Sr2RGl3jocd4gDics+jY1Tc5bhNCTrQbEGedBh7gu6/Kj4CeXK+KJeXG+k3BAl4VeavilRNk0NfRcw6WisP4nvme8TfPER1oUGTgVVRCrP0k03yL8AAp6C3N7Y7HDAAAAAElFTkSuQmCC") no-repeat;
+    //     display: block;
+    //     background-size: contain;
+    //     line-height: 1.6em;
+    //     margin-left: .5em;
+    //     margin-bottom: 0;
+    // }
 
     ruby {
         // background-color: rgba(146,185,204,.3);
@@ -175,6 +193,7 @@
         margin: 1em auto !important;
         text-align: center;
         font-size: 1.5em;
+        background: none;
         color: #9a9a9a;
         text-shadow: 1px 1px 2px #ddd;
         border: 0 !important;
@@ -188,6 +207,8 @@
         background: #eee;
     }
     code, pre {
+        background-color: #eee;
+        border-radius: 5px;
         line-height: 1.2em;
         font-size: 16px;
         padding: 0px 3px;
@@ -268,9 +289,11 @@
         display: flex;
         justify-content: center;
         max-width: 100%;
-        max-height: -webkit-fill-available;
+        max-height: calc(80vh);
         box-sizing: content-box;
         width: auto;
+        border-radius: 6px;
+        box-shadow: rgba(76,76,76,0.25) 1px 1px 12px;
     }
     .shk {
         margin: 1em 0;
@@ -401,13 +424,13 @@
     .post-content {
         text-align: center;
         margin-bottom: 1em;
-        p {
-            color: #222;
-        }
-        a {
-            color: #222;
-            text-decoration: none;
-        }
+        // p {
+        //     color: #222;
+        // }
+        // a {
+        //     color: #222;
+        //     text-decoration: none;
+        // }
         .More {
             border-bottom: none;
             font-weight: bold;
@@ -449,10 +472,11 @@
 #top{
     width: 30px;
     height: 50px;
-    background: rgba(85, 85, 85, 0.3) none repeat scroll 0% 0%;
+    background: rgba(255,255,255,0.24) none repeat scroll 0% 0%;
     position: fixed;
     bottom: 1%;
-    right: 3%;
+    right: 2%;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
     a{
@@ -460,7 +484,8 @@
         font-size: 18px;
         line-height: 25px;
         color: #FFF;
-        background-color: inherit;
+        border-radius: 5px;
+        // background-color: inherit;
         text-decoration: none;
         transition: .3s  background-color;
         &:hover{
@@ -472,4 +497,5 @@
 
 .apple {
     font-family:'ST Song','songti SC','SimSun',serif !important;
+    font-weight: 600;
 }

@@ -44,7 +44,7 @@ $(document).ready(function ShowTimeFamamaGone() {
     var leave1=datetime%(24*3600*1000);                          //计算天数后剩余的毫秒数
     var hours=Math.floor(leave1/(3600*1000));                    //计算出小时数
     var dot = Math.floor(hours/24);
-    $("#jumao").html('第 ' + length + '.' + dot + ' 天');
+    $("#jumao").html('第 ' + length + ' 天');
     // console.log('橘猫不在的第' + length + '.' + dot + '天');
 });
 
