@@ -10,6 +10,11 @@
         <% } else { %>
         <span class="post-author"><%= config.author %></span>
         <% } %>
+        <% if (page.tags && page.tags.length){ %>
+            <%- list_tags(page.tags, {
+              class: 'article-tag'
+            }) %>
+        <% } %>
     </div>
     <% }%>
     <% if (page.image) { %>
