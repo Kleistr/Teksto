@@ -1,4 +1,4 @@
-<% if ((page.layout == 'post' || page.layout == 'page') && theme.disqus_shortname && page.comments) { %>
+<% if ((page.layout == 'post' || page.layout == 'page') && theme.disqus_shortname && theme.comment && page.comments) { %>
 <section id="comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">

@@ -10,6 +10,11 @@ fa: true
 vertical: false
 excerpt: true
 toc: true
+
+# Disqus comment. if comments = false then disqus won't be load
+comments: false
+disqus_shortname: kleist
+
 darkmode: true
 always_darkmode: false
 favicon: /imgs/favicon.png
