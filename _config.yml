@@ -11,6 +11,9 @@ vertical: false
 excerpt: true
 toc: true
 
+# add update time
+update: false
+
 # Disqus comment. if comments = false then disqus won't be load
 comments: false
 disqus_shortname: kleist

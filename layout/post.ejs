@@ -5,16 +5,15 @@
     <% if (page.title !== "About") { %>
     <div class="post-meta">
         <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
+        <% if (theme.update){ %>
+            <span class="post-time"><%= __('Updated') %> <%- moment(page.updated,"YYYY-MM-DD").fromNow() %></span>
+        <% } %>
         <% if (page.author) { %>
         <span class="post-author"><%= page.author %></span>
         <% } else { %>
         <span class="post-author"><%= config.author %></span>
         <% } %>
-        <% if (page.tags && page.tags.length){ %>
-            <%- list_tags(page.tags, {
-              class: 'article-tag'
-            }) %>
-        <% } %>
+        <%- partial('_partial/tags') %>
     </div>
     <% }%>
     <% if (page.image) { %>
