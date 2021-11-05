@@ -12,7 +12,7 @@ excerpt: true
 toc: true
 
 # add update time
-update: false
+update: true
 
 # Disqus comment. if comments = false then disqus won't be load
 comments: false
