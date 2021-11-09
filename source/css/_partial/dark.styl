@@ -1,4 +1,10 @@
 // dark mode css
+
+:root {
+    --theme-blockquote-color: rgba(74,80,88,.15);
+    --theme-color:#1E88A8;
+}
+
 body {
     background-color: var(--dark-background-color);
     color: var(--dark-front-color);
@@ -16,7 +22,7 @@ body {
     }
     .menu .menu-item-link {
         &:hover {
-            color: var(--dark-front-color);
+            color: var(--theme-color);
         }
     }
 }
@@ -61,6 +67,10 @@ body {
     }
     ruby rt {
         color: #818181;
+    }
+    blockquote {
+        background: var(--theme-blockquote-color);
+        border-left: 3px solid var(--theme-color);
     }
     blockquote a,blockquote p,blockquote li {
         color: var(--dark-front-color);
