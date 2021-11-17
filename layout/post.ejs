@@ -6,7 +6,7 @@
     <div class="post-meta">
         <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
         <% if (theme.update){ %>
-            <span class="post-time"><%= __('Updated') %> <%- moment(page.updated,"YYYY-MM-DD").fromNow() %></span>
+            <span class="post-time hidden" id = 'expire-alert'><%- __('Updated', '<time datetime="' + page.updated + '"></time>') %></span>
         <% } %>
         <% if (page.author) { %>
         <span class="post-author"><%= page.author %></span>
