@@ -7,6 +7,7 @@
         <span class="post-time"><%- date(page.date, "YYYY-MM-DD") %></span>
         <% if (theme.update){ %>
             <span class="post-time hidden" id = 'expire-alert'><%- __('Updated', '<time datetime="' + page.updated + '"></time>') %></span>
+            <%- js('js/updateTimeAlert.js') %>
         <% } %>
         <% if (page.author) { %>
         <span class="post-author"><%= page.author %></span>
