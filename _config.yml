@@ -14,12 +14,13 @@ toc: true
 # add update time
 update: true
 
-# Disqus comment. if comments = false then disqus won't be load
-comments: false
+# Disqus comment. if comment = false then disqus won't be loaded,also if comments in page header is false, disqus won't be loaded.
+comment: false
 disqus_shortname: kleist
 
 darkmode: true
 always_darkmode: false
+logo: /imgs/logo_red.png
 favicon: /imgs/favicon.png
 avatar:  /imgs/avatar.png
 license: CC BY-NC-ND 4.0
