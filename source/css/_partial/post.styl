@@ -519,7 +519,9 @@
     content: "* * *";
     text-align: center;
 }
-
+#footnotelist li a {
+    font-family: sans-serif;    
+}
 #top{
     width: 30px;
     height: 50px;
@@ -555,10 +557,21 @@
     display: none;
 }
 em {
-        font-size: calc(18px + 2 * ((100vw - 320px) / 960));
-    font-family: kaiti;
     font-style: normal;
+    border-bottom: 1px dashed;
+    border-bottom-color: var(--theme-color);
 }
 .hidden {
     display: none;
+}
+
+#hr_0 {
+    border: 1px solid;
+    border-color: #999;
+    margin-bottom: 0;
+}
+#hr_1 {
+    margin-top: 3px;
+    border-top: 1px;
+    border-color: #999;
 }
