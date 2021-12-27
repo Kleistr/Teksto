@@ -13,7 +13,10 @@
             <!-- <img src="<%= page.image %>" alt=""> -->
         </div>
         <div id="cyfwlp-logo">
-            <img src="<%= theme.logo %>" alt="" style="max-height: 2.5em;">
+            <picture>
+                <source srcset="/imgs/logo.png" media="(prefers-color-scheme: dark)" />
+                <img src="<%= theme.logo %>"/  style="max-height: 2.5em;">
+            </picture>
         </div>
     <% }%>
     <nav class="navbar">
