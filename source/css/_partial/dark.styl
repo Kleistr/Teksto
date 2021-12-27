@@ -3,6 +3,9 @@
 :root {
     --theme-blockquote-color: rgba(74,80,88,.15);
     --theme-color:#1E88A8;
+    --theme-light_bkg-color: #2f2f2f;
+    --dark-background-color: #2f2f2f;
+    --dark-front-color: #cdcdcd;
 }
 
 body {
@@ -15,7 +18,7 @@ body {
         color: var(--dark-front-color);
     }
     .description {
-        color: #e5e5e5;    
+        color: var(--dark-front-color);  
     }
     .menu .current-menu-item-link {
         color: var(--dark-front-color);
@@ -90,6 +93,9 @@ body {
     }
     .toc-article {
         background: #272727;
+    }
+    p img {
+        filter: brightness(0.8);
     }
 }
 

@@ -2,14 +2,14 @@
     --serif-font-family: 'Noto Serif SC',  "Segoe UI Emoji", serif;
     --main-color: rgba(0, 0, 0, 0.86);
     --theme-color:#3c8cf9;
+    --theme-light_bkg-color: #fff;
     --theme-blockquote-color: #006cff26;
     // --theme-color: #1e88a8;
     // --theme-color: #1067de;       //apple deep blue
     // --theme-color: #2b9bff;       //apple light blue
     // --theme-color: #75409A;      //初号机紫
     // --theme-color: #81CC91;      // 初号机绿
-    --dark-background-color: #2f2f2f;
-    --dark-front-color: #e5e5e5;
+
 }
 // @font-face {
 //     font-family: 'FOT-MatissePro';
@@ -20,6 +20,10 @@
 {
 	0%{ font-size: 1.5em;}
     100%{font-size: 1.7em;}
+}
+
+body {
+    font-family: var(--serif-font-family);
 }
 .post {
     padding: 1.3em 2em;
@@ -42,6 +46,9 @@
     }
     .post-title {
         color: var(--main-color);
+    }
+    .post-meta {
+        margin-top: 1em;
     }
     .post-meta > span:not(:first-child):before{
         content: "/ ";
