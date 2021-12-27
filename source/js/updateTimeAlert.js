@@ -47,7 +47,6 @@ $(document).ready(function alertTime() {
     const expireAlert = document.getElementById('expire-alert');
     const dateTimeTag = expireAlert.querySelector('time');
     const updateDateTime = new Date(parseInt(dateTimeTag.getAttribute('datetime')));
-    console.log(updateDateTime);
     const nowDateTime = Date.now();
     const gap = nowDateTime - updateDateTime;
     if (gap > 365 * 24 * 3600 * 1000) {
