@@ -22,32 +22,21 @@
     <meta property="og:image:width" content="200" />
     <meta property="og:image:height" content="200" />
     <% if (config.language === 'zh-cn' && !theme.vertical) { %> 
-        <link href="https://fonts.geekzu.org/css2?family=Noto+Serif+SC:wght@500;600;900&display=swap" rel="stylesheet">
-        <!-- <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet"> -->
-        <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet"> -->
-        <style>
-            body {
-                font-family: var(--serif-font-family);
-            }
-        </style>
+    <link href="https://fonts.geekzu.org/css2?family=Noto+Serif+SC:wght@500;600;900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet"> -->
     <% } else { %>
-        <link href="https://fonts.loli.net/css2?family=Noto+Serif+TC:wght@500;600;900&display=swap" rel="stylesheet">
-        <style>
-            body {
-                /* font-family: var(--serif-font-family); */
-                font-family:'Source Serif Pro', 'Source Han Serif TC', 'Noto Serif CJK TC', 'Noto Serif TC', serif;
-            }
-        </style>
+    <link href="https://fonts.loli.net/css2?family=Noto+Serif+TC:wght@500;600;900&display=swap" rel="stylesheet">
     <% } %>
     <!-- <link href="https://fonts.loli.net/css2?family=Source+Serif+Pro:wght@500;600;700&display=swap" rel="stylesheet">  -->
     <%- favicon_tag(theme.favicon) %>
     <% if (config.highlight.enable) { %>
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/atom-one-light.min.css">
-        <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
-        
-        <script>hljs.initHighlightingOnLoad();</script>
-        <% } %>
-        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/atom-one-light.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <% } %>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <% if (theme.podcast) { %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shikwasa@2.0.0/dist/shikwasa.min.css">
     <script src="https://cdn.jsdelivr.net/npm/shikwasa@2.0.0/dist/shikwasa.min.js"></script>
