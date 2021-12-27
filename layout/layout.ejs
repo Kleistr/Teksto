@@ -10,5 +10,7 @@
         <%- body %>
     </main>
 </body>
-
+<% if ((is_post() || is_page()) && theme.footer) { %>
+    <%- partial('_partial/license', {}, {cache: true}) %>
+<% }%>
 </html>
