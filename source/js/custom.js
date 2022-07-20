@@ -487,17 +487,3 @@ $(document).ready(function() {
     weekday = dayOfWeekStrJP[weekday.replace('星期','')];
     $("#weekday").text(weekday)
 });
-
-let media = window.matchMedia('(prefers-color-scheme: dark)');
-let callback = (e) => {
-    let prefersDarkMode = e.matches;
-    if (prefersDarkMode) {
-        $('#cyfwlp-logo').children('img').attr("src", '/imgs/logo.png');
-    }
-    else {
-        $('#cyfwlp-logo').children('img').attr("src", '/imgs/logo_red.png');
-    }
-};
-if (typeof media.addEventListener === 'function') {
-    media.addEventListener('change', callback);
-}

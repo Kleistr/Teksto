@@ -1,5 +1,11 @@
 # 清文 | Teksto
 
+<p align="center">
+
+![GitHub](https://img.shields.io/github/license/Kleistr/Teksto?style=flat-square)
+
+</p>
+
 这是一个几乎纯文本的 hexo 主题，从 2015 年搭建 typecho 后来换到 wordpress，最后停留在 hexo，期间换个不少主题，但每次都是自己修修改改用段时间就腻了。或许跟喝饮料喝白开水一个性质吧，尽管出门热得够呛的时候期望来一杯加冰快乐水，但长久陪伴的还是白开。所以最后就做了一个没有花里胡哨排版，尽量减少美化的主题，可能寡淡并不适合大众口味，不过无妨。
 
 ![shortcut](source/imgs/shortcut.png)
