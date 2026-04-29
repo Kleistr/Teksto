@@ -42,22 +42,59 @@
 </div>
 <!-- addTocToggle-->
 <script>
-    $(".js-toggle-toc").text(" ▽");
-    $(".js-toggle-toc").click(function(){
-        var toc = $(".toc-content");
-        toc.toggle();
-        if (toc.is(":hidden")) {
-            $(this).text(" ▶");
-        } else {
-            $(this).text(" ▽");
-        }
-        return false;
-    });
-    function  backToTop() {
+    function backToTop() {
         $('html, body').animate({ scrollTop: 0 });
     }
     function downToBottom(){
         var docHeight = $('body').height();
         $('html, body').animate({ scrollTop: docHeight });
     }
+    (function() {
+        var tocLinks = document.querySelectorAll('.toc-dock .toc-link');
+        if (!tocLinks.length) return;
+        var headingMap = {};
+        tocLinks.forEach(function(link) {
+            var id = decodeURIComponent(link.getAttribute('href')).slice(1);
+            var heading = document.getElementById(id);
+            if (heading) headingMap[id] = link;
+        });
+        var headings = Object.keys(headingMap).map(function(id) {
+            return document.getElementById(id);
+        }).filter(Boolean);
+        if (!headings.length) return;
+        var currentActive = null;
+        function clearActive() {
+            if (currentActive) {
+                currentActive.classList.remove('active');
+                currentActive = null;
+            }
+        }
+        function onScroll() {
+            var scrollY = window.scrollY;
+            var offset = window.innerHeight * 0.3;
+            var target = null;
+            for (var i = headings.length - 1; i >= 0; i--) {
+                if (headings[i].getBoundingClientRect().top <= offset) {
+                    target = headings[i];
+                    break;
+                }
+            }
+            clearActive();
+            if (target && headingMap[target.id]) {
+                currentActive = headingMap[target.id];
+                currentActive.classList.add('active');
+            }
+        }
+        var ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    onScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+        onScroll();
+    })();
 </script>

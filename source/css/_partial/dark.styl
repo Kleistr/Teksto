@@ -91,8 +91,34 @@ body {
     a {
         color: var(--dark-front-color);
     }
-    .toc-article {
-        background: #272727;
+    .toc-dock {
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.12);
+            }
+        }
+        .toc-dock-header {
+            color: rgba(255, 255, 255, 0.85);
+            border-bottom-color: rgba(255, 255, 255, 0.06);
+        }
+        .toc-dock-body .toc-link {
+            color: rgba(255, 255, 255, 0.3);
+            &:before {
+                background: rgba(255, 255, 255, 0.15);
+            }
+            &:hover {
+                color: var(--theme-color);
+                &:before {
+                    background: var(--theme-color);
+                }
+            }
+            &.active {
+                color: var(--theme-color);
+                &:before {
+                    background: var(--theme-color);
+                }
+            }
+        }
     }
     p img {
         filter: brightness(0.8);
@@ -112,6 +138,9 @@ body {
 }
 .archive .post-archive .post-item .post-title {
     color: var(--dark-front-color);
+}
+.tag-count {
+    color: rgba(255, 255, 255, 0.4);
 }
 code, pre {
     background-color: #151515 !important;

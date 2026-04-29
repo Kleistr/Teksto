@@ -1,9 +1,10 @@
 <% if ( page.toc && theme.toc !== false){ %>
-        <div id="toc" class="toc-article">
-                <strong  class="toc-title"><a class="js-toggle-toc" href="javascript:void(0)"></a> &nbsp;目录</strong>
-                
-                <div class="toc-content">
-                        <%- toc(page.content, {list_number: false}) %>
-                </div>
+<div class="toc-dock" id="toc">
+        <div class="toc-dock-header">
+                <span>目录</span>
         </div>
+        <div class="toc-dock-body">
+                <%- toc(page.content, {list_number: false}) %>
+        </div>
+</div>
 <% } %>
