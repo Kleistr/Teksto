@@ -78,7 +78,7 @@ $(document).ready(function ShowTimeFamamaGone() {
 // });
 
 // smoothScroll
-!function() {
+!function() { 
     var s, i, c, a, o = {
         frameRate: 150,
         animationTime: 400,
